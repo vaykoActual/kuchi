@@ -27,22 +27,22 @@ https://lucid.app/lucidchart/invitations/accept/aff8d64b-c88c-4d36-9590-e8b8af96
 Show us a snippet of JSON returned by your Airtable (you can find it under the API documentation) so we know you can access it and get the info you need. This **must** be properly formatted. An example is below:
 
 ```json
-base('Table 1').create([
-  {
+{
     "fields": {
       "cuisine": "Japanese",
       "location": "NY, NY",
       "operating hours": "Open",
       "contact": "Takumi ",
-      "review": "Overall the sushi was good, pretty standard stuff for a fair price. Hit the spot. If I had to be critical about one thing... the shrimp tempura roll i..."
+      "review": "Overall the sushi was good, pretty standard stuff for a fair price. Hit the spot. If I had to be critical about one thing... the shrimp tempura roll i...",
+      "Rating": 4
     }
   },
   {
     "fields": {
-      "cuisine": "price range",
-      "location": "Sushi, Sashimi, Tempura, Gyoza"
+      "cuisine": "Thai",
+      "location": "Sushi, Sashimi, Tempura, Gyoza",
+      "Rating": 5
     }
-  }
 
 ```
 
@@ -108,13 +108,13 @@ Time frames are also key in the development cycle. You have limited time to code
 
 ## SWOT Analysis
 
-### Strengths:
+### Strengths: Linking and Routing
 
-### Weaknesses:
+### Weaknesses: Nomenclature
 
-### Opportunities:
+### Opportunities: Bringing everything together
 
-### Threats:
+### Threats: None foreseable
 
 ```
 
