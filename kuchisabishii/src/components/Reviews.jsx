@@ -22,4 +22,4 @@ function Review(props) {
     </div>
   );
 }
-export default Reviews;
+export default Review;

@@ -4,6 +4,7 @@ import { Route, useHistory } from "react-router-dom";
 import { baseURL, config } from "./services";
 import Nav from "./components/Nav";
 import Form from "./components/Form";
+import Reviews from "./components/Reviews";
 
 import "./App.css";
 
@@ -18,7 +19,7 @@ function App() {
       setReview(resp.data.records);
     };
     getReview();
-  }, []);
+  }, [toggleFetch]);
 
   return (
     <div className="App">
