@@ -1,26 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./HomePage.css";
 
 function HomePage(props) {
   return (
-    <header>
-      <h1 className="title">Kuchisabishii</h1>
-      <h3>Cuisine</h3>
-      <h4>
-        <Link to="/New">Submit a Review</Link>
-      </h4>
-      <div className="Reviews">
-        {props.cuisineArray.map((cuisine) => {
-          return (
-            <div className="bird">
-              <Link to={`${cuiosine.name}`}>
-                <img src={cuisine.image} />
-              </Link>
-            </div>
-          );
-        })}
-      </div>
-    </header>
+    <div>
+      Hello
+      {props.restaurants.map((restaurant) => (
+        <div className="restaurant-list">
+          <div className="restaurant-name" key={restaurant.id}>
+            {restaurant.fields.name}
+          </div>
+          <Link to={`/edit/${restaurant.id}`}> add review</Link>
+        </div>
+      ))}
+    </div>
   );
 }
 export default HomePage;

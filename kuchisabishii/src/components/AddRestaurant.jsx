@@ -5,10 +5,9 @@ import { baseURL, config } from "../services";
 
 function Form(props) {
   const [cuisine, setCuisine] = useState("");
-  const [review, setReview] = useState("");
   const [rating, setRating] = useState("");
   const [location, setLocation] = useState("");
-  const [restaurant, setRestaurant] = useState(null);
+  const [restaurant, setRestaurant] = useState({});
   const params = useParams();
 
   useEffect(() => {
@@ -43,28 +42,30 @@ function Form(props) {
   };
 
   return (
-    <div>
-      <div>{restaurant !== null && restaurant.fields.name}</div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="review">Review:</label>
-        <input
-          name="review"
-          type="text"
-          value={"review"}
-          onChange={(e) => setReview(e.target.value)}
-        />
-        <label htmlFor="rating">Ratings:</label>
-        <input
-          name="rating"
-          type="text"
-          value={rating}
-          onChange={(e) => setRating(e.target.value)}
-        />
-        <label htmlFor="location">Locations</label>
-
-        <button type="submit">submit</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="cuisine">Cuisine:</label>
+      <input
+        name="cuisine"
+        type="text"
+        value={"help"}
+        onChange={(e) => setCuisine(e.target.value)}
+      />
+      <label htmlFor="rating">Ratings:</label>
+      <input
+        name="rating"
+        type="text"
+        value={rating}
+        onChange={(e) => setRating(e.target.value)}
+      />
+      <label htmlFor="location">Locations</label>
+      <input
+        name="locations"
+        type="text"
+        value={Location}
+        onChange={(e) => setLocation(e.target.value)}
+      />
+      <button type="submit">submit</button>
+    </form>
   );
 }
 
