@@ -15,10 +15,10 @@ function Review(props) {
       <h3>{cuisines}</h3>
       <h4>{ratings}</h4>
       <ul>{locations}</ul>
-      <Link to={`/edit/${props.review.id}`}>
+      {/* <Link to={`/edit/${props.review.id}`}>
         <button>Submit Review</button>
       </Link>
-      <button onClick={handleDelete}>SelfDestruct</button>
+      <button onClick={handleDelete}>SelfDestruct</button> */}
     </div>
   );
 }

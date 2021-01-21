@@ -56,9 +56,11 @@ function Form(props) {
         <label htmlFor="rating">Ratings:</label>
         <input
           name="rating"
-          type="text"
+          type="number"
+          min="1"
+          max="5"
           value={rating}
-          onChange={(e) => setRating(e.target.value)}
+          onChange={(e) => setRating(e.target.valueAsNumber)}
         />
         <label htmlFor="location">Locations</label>
 
