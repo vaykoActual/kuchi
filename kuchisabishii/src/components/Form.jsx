@@ -4,15 +4,15 @@ import { useParams } from "react-router-dom";
 import { baseURL, config } from "../services";
 
 function Form(props) {
-  const [Cuisine, setCuisine] = useState("");
+  const [cuisine, setCuisine] = useState("");
   const [Rating, setRating] = useState("");
   const [Location, setLocation] = useState("");
-  const [Review, setReview] = useState("");
+  // const [Review, setReview] = useState("");
   const params = useParams();
 
   useEffect(() => {
     if (props.review.length > 0 && params.id) {
-      const foundCuisine = props.reviews.find(
+      const foundCuisine = props.review.find(
         (review) => params.id === review.id
       );
       setCuisine(foundCuisine.fields.Cuisine);
@@ -23,21 +23,16 @@ function Form(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // make a fields object
-    // give it the values from the states
     const fields = {
-      Cuisine,
+      cuisine,
       Rating,
       Location,
     };
     if (params.id) {
-      // make a PUT request
       const recordURL = `${baseURL}/${params.id}`;
       await axios.put(recordURL, { fields }, config);
     } else {
-      // axios POST request
       await axios.post(baseURL, { fields }, config);
-      console.log(fields);
     }
     props.setToggleFetch((prev) => !prev);
   };
@@ -48,7 +43,7 @@ function Form(props) {
       <input
         name="cuisine"
         type="text"
-        value={Cuisine}
+        value={cuisine}
         onChange={(e) => setCuisine(e.target.value)}
       />
       <label htmlFor="rating">Ratings:</label>

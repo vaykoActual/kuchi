@@ -4,19 +4,21 @@ import { Route, useHistory } from "react-router-dom";
 import { baseURL, config } from "./services";
 import Nav from "./components/Nav";
 import Form from "./components/Form";
-import Reviews from "./components/Reviews";
+import Review from "./components/Review";
 
 import "./App.css";
 
 function App() {
   const [review, setReview] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
+  const history = useHistory();
 
   useEffect(() => {
     const getReview = async () => {
       const resp = await axios.get(baseURL, config);
       console.log(resp.data.records);
       setReview(resp.data.records);
+      history.push("/");
     };
     getReview();
   }, [toggleFetch]);
@@ -25,8 +27,8 @@ function App() {
     <div className="App">
       <Nav />
       <Route exact path="/">
-        {review.map((reviews) => (
-          <review
+        {review.map((review) => (
+          <Review
             key={review.id}
             review={review}
             setToggleFetch={setToggleFetch}
