@@ -10,7 +10,7 @@ function HomePage(props) {
       {props.restaurants.map((restaurant) => (
         <div className="restaurant-list">
           <Link
-            to={`./restaurantDetail/${restaurant.id}`}
+            to={`/restaurantInfo/${restaurant.id}`}
             className="restaurant-name"
             key={restaurant.id}
           >

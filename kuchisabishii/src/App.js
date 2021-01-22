@@ -7,7 +7,7 @@ import Form from "./components/Form";
 // import Review from "./components/Review";
 import HomePage from "./components/HomePage";
 import AddRestaurant from "./components/AddRestaurant";
-import RestaurantDetail from "./components/RestaurantDetail";
+import RestaurantInfo from "./components/RestaurantInfo";
 
 import "./App.css";
 
@@ -48,8 +48,8 @@ function App() {
           setToggleFetch={setToggleFetch}
         />
       </Route>
-      <Route path="./RestaurantDetail/:id">
-        <RestaurantDetail restaurants={restaurants} />
+      <Route path="/RestaurantInfo/:id">
+        <RestaurantInfo restaurants={restaurants} />
       </Route>
     </div>
   );
