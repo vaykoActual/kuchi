@@ -6,6 +6,7 @@ import Nav from "./components/Nav";
 import Form from "./components/Form";
 import Review from "./components/Review";
 import HomePage from "./components/HomePage";
+import AddRestaurant from "./components/AddRestaurant";
 
 import "./App.css";
 
@@ -33,6 +34,9 @@ function App() {
       </Route>
       <Route path="/new">
         <Form review={review} setToggleFetch={setToggleFetch} />
+      </Route>
+      <Route path="/new-restaurant">
+        <AddRestaurant review={review} setToggleFetch={setToggleFetch} />
       </Route>
       <Route path="/edit/:id">
         <Form

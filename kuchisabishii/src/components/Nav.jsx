@@ -4,7 +4,7 @@ function Nav() {
   return (
     <nav>
       <Link to="/">Kuchisabishii</Link>
-      {/* <Link to="/new">Submit Review</Link> */}
+      <Link to="/new-restaurant">New Restaurant</Link>
     </nav>
   );
 }

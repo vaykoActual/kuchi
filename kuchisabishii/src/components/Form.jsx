@@ -52,7 +52,7 @@ function Form(props) {
         <input
           name="review"
           type="text"
-          value={"review"}
+          value={review}
           onChange={(e) => setReview(e.target.value)}
         />
         <label htmlFor="rating">Rating:</label>

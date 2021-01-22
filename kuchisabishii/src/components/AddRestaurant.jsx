@@ -6,31 +6,31 @@ import { baseURL, config } from "../services";
 function Form(props) {
   const [cuisine, setCuisine] = useState("");
   const [rating, setRating] = useState("");
-  const [location, setLocation] = useState("");
+  const [review, setReview] = useState("");
   const [restaurant, setRestaurant] = useState({});
   const params = useParams();
 
-  useEffect(() => {
-    const foundRestaurant = props.restaurants.find(
-      (restaurant) => params.id === restaurant.id
-    );
-    setRestaurant(foundRestaurant);
-    // if (props.review.length > 0 && params.id) {
-    //   const foundCuisine = props.review.find(
-    //     (review) => params.id === review.id
-    //   );
-    //   setCuisine(foundCuisine.fields.cuisine);
-    //   setRating(foundCuisine.fields.rating);
-    //   setLocation(foundCuisine.fields.location);
-    // }
-  }, [params.id, props.restaurants]);
+  // useEffect(() => {
+  //   const foundRestaurant = props.restaurants.find(
+  //     (restaurant) => params.id === restaurant.id
+  //   );
+  //   setRestaurant(foundRestaurant);
+  // if (props.review.length > 0 && params.id) {
+  //   const foundCuisine = props.review.find(
+  //     (review) => params.id === review.id
+  //   );
+  //   setCuisine(foundCuisine.fields.cuisine);
+  //   setRating(foundCuisine.fields.rating);
+  //   setLocation(foundCuisine.fields.location);
+  // }
+  // }, [params.id, props.restaurants]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const fields = {
-      cuisine,
-      rating,
-      location,
+      name: cuisine,
+      rating: rating,
+      review: review,
     };
     if (params.id) {
       const recordURL = `${baseURL}/${params.id}`;
@@ -43,26 +43,28 @@ function Form(props) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="cuisine">Cuisine:</label>
+      <label htmlFor="name">Name:</label>
       <input
-        name="cuisine"
+        name="name"
         type="text"
-        value={"help"}
+        value={cuisine}
         onChange={(e) => setCuisine(e.target.value)}
       />
       <label htmlFor="rating">Ratings:</label>
       <input
         name="rating"
-        type="text"
+        type="number"
+        min="1"
+        max="5"
         value={rating}
-        onChange={(e) => setRating(e.target.value)}
+        onChange={(e) => setRating(e.target.valueAsNumber)}
       />
-      <label htmlFor="location">Locations</label>
+      <label htmlFor="review">Review</label>
       <input
-        name="locations"
+        name="review"
         type="text"
-        value={Location}
-        onChange={(e) => setLocation(e.target.value)}
+        value={review}
+        onChange={(e) => setReview(e.target.value)}
       />
       <button type="submit">submit</button>
     </form>
