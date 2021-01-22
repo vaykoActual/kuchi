@@ -7,7 +7,12 @@ function RestaurantInfo(props) {
   );
   console.log(foundRestaurant);
 
-  return <div>{foundRestaurant.fields.name}</div>;
+  return (
+    <div>
+      <h2>{foundRestaurant.fields.name}: </h2>
+      <h4>{foundRestaurant.fields.review}</h4>
+    </div>
+  );
 }
 
 export default RestaurantInfo;

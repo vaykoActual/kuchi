@@ -12,7 +12,12 @@ nav {
   background-color: orange;
   font-family: "Permanent Marker", cursive;
 }
-div {
+div,
+h1,
+h2,
+h3,
+h4 {
   font-family: "Permanent Marker", cursive;
   background-color: red;
+  color: white;
 }
