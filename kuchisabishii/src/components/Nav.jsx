@@ -4,7 +4,9 @@ function Nav() {
   return (
     <nav>
       <Link to="/">Kuchisabishii</Link>
-      <Link to="/new-restaurant">New Restaurant</Link>
+      <Link className="links" to="/new-restaurant">
+        New Restaurant
+      </Link>
     </nav>
   );
 }

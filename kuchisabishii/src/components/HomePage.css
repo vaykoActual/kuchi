@@ -5,3 +5,9 @@
 .restaurant-name {
   padding: 0 25px;
 }
+.links {
+  padding: 25px;
+}
+nav {
+  background-color: orange;
+}

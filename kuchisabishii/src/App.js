@@ -29,6 +29,7 @@ function App() {
   return (
     <div className="App">
       <Nav />
+
       <Route exact path="/">
         <HomePage restaurants={restaurants} />
       </Route>
