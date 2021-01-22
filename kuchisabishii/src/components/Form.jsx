@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { baseURL, config } from "../services";
 
 function Form(props) {
-  const [cuisine, setCuisine] = useState("");
+  const [name, setName] = useState("");
   const [review, setReview] = useState("");
   const [rating, setRating] = useState("");
   const [location, setLocation] = useState("");
@@ -20,7 +20,7 @@ function Form(props) {
     //   const foundCuisine = props.review.find(
     //     (review) => params.id === review.id
     //   );
-    //   setCuisine(foundCuisine.fields.cuisine);
+    setName(foundRestaurant.fields.name);
     //   setRating(foundCuisine.fields.rating);
     //   setLocation(foundCuisine.fields.location);
     // }
@@ -29,6 +29,7 @@ function Form(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const fields = {
+      name,
       review,
       rating,
     };
