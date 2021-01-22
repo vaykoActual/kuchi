@@ -29,9 +29,8 @@ function Form(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const fields = {
-      cuisine,
+      review,
       rating,
-      location,
     };
     if (params.id) {
       const recordURL = `${baseURL}/${params.id}`;
