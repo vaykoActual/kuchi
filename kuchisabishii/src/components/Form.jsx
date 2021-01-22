@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { baseURL, config } from "../services";
+import styled from "styled-components";
 
 function Form(props) {
   const [name, setName] = useState("");
@@ -10,6 +11,7 @@ function Form(props) {
   const [location, setLocation] = useState("");
   const [restaurant, setRestaurant] = useState(null);
   const params = useParams();
+  const Button = styled.button``;
 
   useEffect(() => {
     const foundRestaurant = props.restaurants.find(
@@ -49,7 +51,7 @@ function Form(props) {
       </div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="review">Review:</label>
-        <input
+        <Button
           name="review"
           type="text"
           value={review}

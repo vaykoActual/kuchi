@@ -4,7 +4,7 @@ import { Route, useHistory } from "react-router-dom";
 import { baseURL, config } from "./services";
 import Nav from "./components/Nav";
 import Form from "./components/Form";
-import Review from "./components/Review";
+// import Review from "./components/Review";
 import HomePage from "./components/HomePage";
 import AddRestaurant from "./components/AddRestaurant";
 
@@ -29,7 +29,6 @@ function App() {
   return (
     <div className="App">
       <Nav />
-
       <Route exact path="/">
         <HomePage restaurants={restaurants} />
       </Route>
