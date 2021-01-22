@@ -5,7 +5,7 @@ import "./HomePage.css";
 function HomePage(props) {
   return (
     <div>
-      <h1>Lonely Mouth Reviews</h1>
+      <h1>When you’re not hungry, but your mouth is lonely.</h1>
       <img src="https://i.imgur.com/Va2oKwd.jpg" />
       {props.restaurants.map((restaurant) => (
         <div className="restaurant-list">
