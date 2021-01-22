@@ -46,7 +46,6 @@ function Form(props) {
 
   return (
     <div>
-      <h1>Lonely Mouth Reviews</h1>;
       {/* <h1>{restaurant !== null && restaurant.fields.name}</h1> */}
       <form onSubmit={handleSubmit}>
         <label htmlFor="review">Review:</label>

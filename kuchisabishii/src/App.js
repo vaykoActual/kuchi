@@ -7,12 +7,14 @@ import Form from "./components/Form";
 // import Review from "./components/Review";
 import HomePage from "./components/HomePage";
 import AddRestaurant from "./components/AddRestaurant";
+import RestaurantDetail from "./components/RestaurantDetail";
 
 import "./App.css";
 
 function App() {
   const [restaurants, setRestaurants] = useState([]);
   const [review, setReview] = useState([]);
+  const [reviewed, setReviewed] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
   const history = useHistory();
 
@@ -45,6 +47,9 @@ function App() {
           review={review}
           setToggleFetch={setToggleFetch}
         />
+      </Route>
+      <Route path="./RestaurantDetail/:id">
+        <RestaurantDetail restaurants={restaurants} />
       </Route>
     </div>
   );

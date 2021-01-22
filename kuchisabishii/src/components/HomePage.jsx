@@ -9,10 +9,14 @@ function HomePage(props) {
       <img src="https://i.imgur.com/Va2oKwd.jpg" />
       {props.restaurants.map((restaurant) => (
         <div className="restaurant-list">
-          <div className="restaurant-name" key={restaurant.id}>
+          <Link
+            to={`./restaurantDetail/${restaurant.id}`}
+            className="restaurant-name"
+            key={restaurant.id}
+          >
             <h2>{restaurant.fields.name}:</h2>
             <h4>{restaurant.fields.review}</h4>
-          </div>
+          </Link>
           {/* <Link to={`/edit/${restaurant.id}`}> add review</Link> */}
         </div>
       ))}
