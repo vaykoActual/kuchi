@@ -46,9 +46,8 @@ function Form(props) {
 
   return (
     <div>
-      <div>
-        <h1>{restaurant !== null && restaurant.fields.name}</h1>
-      </div>
+      <h1>Lonely Mouth Reviews</h1>;
+      {/* <h1>{restaurant !== null && restaurant.fields.name}</h1> */}
       <form onSubmit={handleSubmit}>
         <label htmlFor="review">Review:</label>
         <Button
@@ -67,7 +66,6 @@ function Form(props) {
           onChange={(e) => setRating(e.target.valueAsNumber)}
         />
         {/* <label htmlFor="location">Locations</label> */}
-
         <button type="submit">submit</button>
       </form>
     </div>

@@ -35,6 +35,7 @@ function App() {
       <Route path="/new">
         <Form review={review} setToggleFetch={setToggleFetch} />
       </Route>
+      <h1>Lonely Mouth Reviews</h1>
       <Route path="/new-restaurant">
         <AddRestaurant review={review} setToggleFetch={setToggleFetch} />
       </Route>
