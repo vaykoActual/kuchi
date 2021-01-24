@@ -2,7 +2,6 @@ import { useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { baseURL, config } from "../services";
-import "./Form.css";
 
 function Form(props) {
   const [cuisine, setCuisine] = useState("");
