@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { baseURL, config } from "../services";
 
 function Form(props) {
-  const [cuisine, setCuisine] = useState("");
+  const [eatery, setEatery] = useState("");
   const [rating, setRating] = useState("");
   const [review, setReview] = useState("");
   const params = useParams();
@@ -12,7 +12,7 @@ function Form(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const fields = {
-      name: cuisine,
+      name: eatery,
       rating: rating,
       review: review,
     };
@@ -29,14 +29,14 @@ function Form(props) {
     <main>
       <div>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">Eatery:</label>
           <input
             name="name"
             type="text"
-            value={cuisine}
-            onChange={(e) => setCuisine(e.target.value)}
+            value={eatery}
+            onChange={(e) => setEatery(e.target.value)}
           />
-          <label htmlFor="rating">Ratings:</label>
+          <label htmlFor="rating">Rate it!:</label>
           <input
             name="rating"
             type="number"
@@ -45,7 +45,7 @@ function Form(props) {
             value={rating}
             onChange={(e) => setRating(e.target.valueAsNumber)}
           />
-          <label htmlFor="review">Review</label>
+          <label htmlFor="review">Review it!</label>
           <input
             name="review"
             type="text"
