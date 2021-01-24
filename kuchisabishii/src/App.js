@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Route, useHistory } from "react-router-dom";
 
 import Nav from "./components/Nav";
-import Form from "./components/Form";
 import HomePage from "./components/HomePage";
 import AddRestaurant from "./components/AddRestaurant";
 import RestaurantInfo from "./components/RestaurantInfo";
