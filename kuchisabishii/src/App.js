@@ -1,5 +1,5 @@
 import axios from "axios";
-import { baseURL, config } from "./services";
+import { baseURL, reviewBaseURL, config } from "./services";
 import { useEffect, useState } from "react";
 import { Route, useHistory } from "react-router-dom";
 
@@ -7,6 +7,7 @@ import Nav from "./components/Nav";
 import HomePage from "./components/HomePage";
 import AddRestaurant from "./components/AddRestaurant";
 import RestaurantInfo from "./components/RestaurantInfo";
+import AddReview from "./components/AddReview";
 
 import "./App.css";
 
@@ -25,6 +26,8 @@ function App() {
       const resp = await axios.get(baseURL, config);
       // console.log(resp.data);
       setRestaurants(resp.data.records);
+      const reviewResp = await axios.get(reviewBaseURL, config);
+      setReview(reviewResp.data.records);
       history.push("/");
     };
     getRestaurants();
@@ -40,7 +43,10 @@ function App() {
         <AddRestaurant review={review} setToggleFetch={setToggleFetch} />
       </Route>
       <Route path="/RestaurantInfo/:id">
-        <RestaurantInfo restaurants={restaurants} />
+        <RestaurantInfo restaurants={restaurants} review={review} />
+      </Route>
+      <Route path="/AddReview">
+        <AddReview review={review} setToggleFetch={setToggleFetch} />
       </Route>
     </div>
   );
