@@ -12,7 +12,6 @@ function RestaurantInfo(props) {
     <div>
       <h2>{foundRestaurant.fields.name}: </h2>
       <h4>{foundRestaurant.fields.review}</h4>
-      {/* <Link to={`/edit/${restaurants.fields.review.id}`}> add review</Link> */}
     </div>
   );
 }
