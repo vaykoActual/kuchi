@@ -42,32 +42,36 @@ function Form(props) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="name">Name:</label>
-      <input
-        name="name"
-        type="text"
-        value={cuisine}
-        onChange={(e) => setCuisine(e.target.value)}
-      />
-      <label htmlFor="rating">Ratings:</label>
-      <input
-        name="rating"
-        type="number"
-        min="1"
-        max="5"
-        value={rating}
-        onChange={(e) => setRating(e.target.valueAsNumber)}
-      />
-      <label htmlFor="review">Review</label>
-      <input
-        name="review"
-        type="text"
-        value={review}
-        onChange={(e) => setReview(e.target.value)}
-      />
-      <button type="submit">submit</button>
-    </form>
+    <main>
+      <div>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="name">Name:</label>
+          <input
+            name="name"
+            type="text"
+            value={cuisine}
+            onChange={(e) => setCuisine(e.target.value)}
+          />
+          <label htmlFor="rating">Ratings:</label>
+          <input
+            name="rating"
+            type="number"
+            min="1"
+            max="5"
+            value={rating}
+            onChange={(e) => setRating(e.target.valueAsNumber)}
+          />
+          <label htmlFor="review">Review</label>
+          <input
+            name="review"
+            type="text"
+            value={review}
+            onChange={(e) => setReview(e.target.value)}
+          />
+          <button type="submit">submit</button>
+        </form>
+      </div>
+    </main>
   );
 }
 

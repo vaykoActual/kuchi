@@ -9,7 +9,7 @@
   padding: 25px;
 }
 nav {
-  background-color: orange;
+  background-color: rgb(228, 151, 8);
   font-family: "Permanent Marker", cursive;
 }
 div,
@@ -18,6 +18,6 @@ h2,
 h3,
 h4 {
   font-family: "Permanent Marker", cursive;
-  background-color: red;
+  background-color: rgb(165, 7, 7);
   color: white;
 }

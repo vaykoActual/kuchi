@@ -17,7 +17,6 @@ function HomePage(props) {
             <h2>{restaurant.fields.name}:</h2>
             <h4>{restaurant.fields.review}</h4>
           </Link>
-          {/* <Link to={`/edit/${restaurant.id}`}> add review</Link> */}
         </div>
       ))}
     </div>
