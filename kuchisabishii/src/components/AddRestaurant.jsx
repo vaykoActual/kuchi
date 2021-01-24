@@ -3,6 +3,8 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { baseURL, config } from "../services";
 
+import "./HomePage.css";
+
 function Form(props) {
   const [eatery, setEatery] = useState("");
   const [rating, setRating] = useState("");

@@ -12,6 +12,7 @@ nav {
   background-color: rgb(228, 151, 8);
   font-family: "Permanent Marker", cursive;
 }
+
 div,
 h1,
 h2,
@@ -19,5 +20,9 @@ h3,
 h4 {
   font-family: "Permanent Marker", cursive;
   background-color: rgb(165, 7, 7);
+  color: white;
+}
+form {
+  display: flexbox;
   color: white;
 }
