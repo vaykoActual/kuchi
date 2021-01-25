@@ -55,7 +55,7 @@ The functionality will then be divided into two separate lists: MVP and PostMVP.
 - Home page with clickable icons that route to each respective feed.
 - Get and post restaurant reviews from Airtable.
 - Use forms to create reviews and update Airtable.
-- Delete posts from the feed and airtable.
+
 
 <!-- _These are examples only. Replace with your own MVP features._ -->
 
