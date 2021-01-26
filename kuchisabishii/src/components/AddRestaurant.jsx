@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { baseURL, config } from "../services";
+import { reviewBaseURL, baseURL, config } from "../services";
 import Footer from "./Footer";
 import "./HomePage.css";
 
@@ -13,10 +13,10 @@ function Form(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    //add restaurant name and rating
     const fields = {
       name: eatery,
       rating: rating,
-      review: review,
     };
     if (params.id) {
       const recordURL = `${baseURL}/${params.id}`;
@@ -24,7 +24,28 @@ function Form(props) {
     } else {
       await axios.post(baseURL, { fields }, config);
     }
-    console.log(fields);
+    //get id of new restaurant
+    const resp = await axios.get(baseURL, config);
+    let recordID = 0;
+    await resp.data.records.forEach((restaurant) => {
+      if (restaurant.fields.ID > recordID) {
+        recordID = restaurant.fields.ID;
+      }
+    });
+    const lastAdded = await resp.data.records.find((restaurant) => {
+      console.log(restaurant.fields.ID, recordID);
+      return restaurant.fields.ID === recordID;
+    });
+
+    console.log(lastAdded, resp, recordID);
+    //add restaurant review
+    const newReview = {
+      review: review,
+      Restaurants: [lastAdded.id],
+    };
+    console.log(newReview);
+    await axios.post(reviewBaseURL, { newReview }, config);
+
     props.setToggleFetch((prev) => !prev);
   };
 

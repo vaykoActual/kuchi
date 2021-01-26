@@ -42,7 +42,11 @@ function App() {
         <HomePage restaurants={restaurants} />
       </Route>
       <Route path="/new-restaurant">
-        <AddRestaurant review={review} setToggleFetch={setToggleFetch} />
+        <AddRestaurant
+          restaurants={restaurants}
+          review={review}
+          setToggleFetch={setToggleFetch}
+        />
       </Route>
       <Route path="/RestaurantInfo/:id">
         <RestaurantInfo restaurants={restaurants} review={review} />

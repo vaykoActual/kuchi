@@ -83,7 +83,7 @@ The functionality will then be divided into two separate lists: MVP and PostMVP.
 | Jan 20 | Core Application Structure (HTML, CSS, etc.)       | Complete   |
 | Jan 21 | Pseudocode / actual code                           | Complete   |
 | Jan 22 | Initial Clickable Model                            | Complete   |
-| Jan 25 | MVP                                                | Incomplete |
+| Jan 25 | MVP                                                | Complete   |
 | Jan 27 | Presentations                                      | Incomplete |
 
 ## Timeframes

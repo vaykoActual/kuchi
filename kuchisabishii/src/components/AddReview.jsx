@@ -16,6 +16,7 @@ function AddReview(props) {
       review: review,
       Restaurants: [params.id],
     };
+    console.log(fields);
     await axios.post(reviewBaseURL, { fields }, config);
     props.setToggleFetch((prev) => !prev);
   };
