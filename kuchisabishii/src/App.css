@@ -35,12 +35,14 @@ img {
     transform: rotate(360deg);
   }
 }
-.footer {
-  margin-top: 1rem;
-  padding: 1rem;
-  background-color: rgb(235, 195, 64);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+
+@media only screen and (max-width: 600px) {
+  div {
+    background: navy;
+  }
+}
+@media only screen and (min-width: 600px) {
+  div {
+    background: rgb(165, 7, 7);
+  }
 }

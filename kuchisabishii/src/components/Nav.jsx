@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 
+import "./HomePage.css";
+
 function Nav() {
   return (
     <nav>
-      <Link to="/">Kuchisabishii</Link>
+      <Link to="/">
+        <button>Kuchisabishii</button>
+      </Link>
       <Link className="links" to="/new-restaurant">
-        Add Your Place
+        <button> Add Your Place </button>
       </Link>
     </nav>
   );

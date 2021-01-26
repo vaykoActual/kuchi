@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { baseURL, config } from "../services";
-
+import Footer from "./Footer";
 import "./HomePage.css";
 
 function Form(props) {
@@ -24,6 +24,7 @@ function Form(props) {
     } else {
       await axios.post(baseURL, { fields }, config);
     }
+    console.log(fields);
     props.setToggleFetch((prev) => !prev);
   };
 
@@ -56,7 +57,9 @@ function Form(props) {
           />
           <button type="submit">submit</button>
         </form>
+        <img src="https://i.imgur.com/Uc45Pnk.jpeg" />
       </div>
+      <Footer />
     </main>
   );
 }

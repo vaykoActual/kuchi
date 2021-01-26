@@ -6,23 +6,50 @@
   padding: 0 25px;
 }
 .links {
-  padding: 25px;
+  padding: 5px;
 }
-nav {
-  background-color: rgb(228, 151, 8);
+nav,
+a,
+h2 {
+  padding: 1rem;
+  background-color: rgb(154, 148, 1);
   font-family: "Permanent Marker", cursive;
+  color: black;
+  top: auto;
+  width: 100%;
 }
 
 div,
 h1,
-h2,
 h3,
 h4 {
   font-family: "Permanent Marker", cursive;
   background-color: rgb(165, 7, 7);
   color: white;
+  padding: 5px;
 }
 form {
   display: flexbox;
+  color: green;
+}
+img {
+  display: inline;
+  align-items: center;
+}
+Footer {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgb(154, 148, 1);
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.blockquote-footer {
   color: white;
+  padding: 1rem;
+}
+path {
+  padding: 25px;
 }

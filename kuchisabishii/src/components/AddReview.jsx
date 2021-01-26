@@ -2,6 +2,7 @@ import { useState } from "react";
 import { reviewBaseURL, config } from "../services";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import "./HomePage.css";
 
 function AddReview(props) {
   const [review, setReview] = useState("");
@@ -11,12 +12,10 @@ function AddReview(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(params.id);
     const fields = {
       review: review,
       Restaurants: [params.id],
     };
-    console.log(fields);
     await axios.post(reviewBaseURL, { fields }, config);
     props.setToggleFetch((prev) => !prev);
   };

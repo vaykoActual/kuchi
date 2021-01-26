@@ -55,7 +55,6 @@ The functionality will then be divided into two separate lists: MVP and PostMVP.
 - Home page with clickable icons that route to each respective feed.
 - Get and post restaurant reviews from Airtable.
 - Use forms to create reviews and update Airtable.
-- Delete posts from the feed and airtable.
 
 <!-- _These are examples only. Replace with your own MVP features._ -->
 
@@ -80,10 +79,10 @@ The functionality will then be divided into two separate lists: MVP and PostMVP.
 | Day    | Deliverable                                        | Status     |
 | ------ | -------------------------------------------------- | ---------- |
 | Jan 19 | Prompt / Wireframes / Priority Matrix / Timeframes | Complete   |
-| Jan 19 | Project Approval                                   | Incomplete |
-| Jan 20 | Core Application Structure (HTML, CSS, etc.)       | Incomplete |
-| Jan 21 | Pseudocode / actual code                           | Incomplete |
-| Jan 22 | Initial Clickable Model                            | Incomplete |
+| Jan 19 | Project Approval                                   | Complete   |
+| Jan 20 | Core Application Structure (HTML, CSS, etc.)       | Complete   |
+| Jan 21 | Pseudocode / actual code                           | Complete   |
+| Jan 22 | Initial Clickable Model                            | Complete   |
 | Jan 25 | MVP                                                | Incomplete |
 | Jan 27 | Presentations                                      | Incomplete |
 
@@ -96,15 +95,15 @@ Time frames are also key in the development cycle. You have limited time to code
 | Component       | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------- | :------: | :------------: | :-----------: | :---------: |
 | Proposal        |    H     |      4hrs      |     4hrs      |    4hrs     |
-| AirTable Config |    H     |      1hrs      |     1hrs      |    1hrs     |
-| Add Buttons     |    H     |      3hrs      |     0hrs      |    0hrs     |
-| Data Population |    H     |      3hrs      |     0hrs      |    0hrs     |
-| Adding Nav      |    H     |      3hrs      |     0hrs      |    0hrs     |
-| Adding Reviews  |    H     |      3hrs      |     0hrs      |    0hrs     |
-| Adding Forms    |    H     |      3hrs      |     0hrs      |    0hrs     |
-| Data Deletion   |    H     |      3hrs      |     0hrs      |    0hrs     |
-| CSS             |    H     |      3hrs      |     0hrs      |    0hrs     |
-| Total           |    H     |     26hrs      |     0hrs      |    0hrs     |
+| AirTable Config |    H     |      1hrs      |     10hrs     |    10hrs    |
+| Add Buttons     |    H     |      3hrs      |     2hrs      |    2hrs     |
+| Data Population |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Adding Nav      |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Adding Reviews  |    H     |      3hrs      |     10hrs     |    10hrs    |
+| Adding Forms    |    H     |      3hrs      |     6hrs      |    6hrs     |
+| Data Deletion   |    H     |      3hrs      |     6hrs      |    6hrs     |
+| CSS             |    H     |      3hrs      |     6hrs      |    6hrs     |
+| Total           |    H     |     26hrs      |     50hrs     |    50hrs    |
 
 ## SWOT Analysis
 
