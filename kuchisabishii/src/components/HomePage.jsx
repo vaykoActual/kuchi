@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 import "./HomePage.css";
 
 function HomePage(props) {
@@ -14,11 +15,12 @@ function HomePage(props) {
             className="restaurant-name"
             key={restaurant.id}
           >
-            <h2>{restaurant.fields.name}:</h2>
-            <h4>{restaurant.fields.review}</h4>
+            <h2>{restaurant.fields.name}</h2>
+            <h5>{restaurant.fields.review}</h5>
           </Link>
         </div>
       ))}
+      <Footer />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { useParams, useHistory } from "react-router-dom";
+import { useParams, useHistory, Link } from "react-router-dom";
 
 function RestaurantInfo(props) {
   const params = useParams();
@@ -10,18 +10,19 @@ function RestaurantInfo(props) {
   const filteredReviews = props.review.filter(
     (review) => review.name === foundRestaurant.name
   );
-  console.log(filteredReviews);
+  console.log(foundRestaurant);
 
   return (
     <div>
-      <h2>{foundRestaurant.fields.name}: </h2>
-      <h4>{foundRestaurant.fields.review}</h4>
+      {<h2>{foundRestaurant.fields.name} </h2>};
       <>
         {filteredReviews.map((oneReview) => {
           return <p>{oneReview.fields.review}</p>;
         })}
       </>
-      <button onClick={() => history.push("/addReview")}>add review</button>
+      <Link to={`./AddReview/${foundRestaurant.fields.name}`}>
+        <button onClick={() => history.push("/addReview")}> add review</button>
+      </Link>
     </div>
   );
 }
