@@ -20,7 +20,7 @@ function RestaurantInfo(props) {
           return <p>{oneReview.fields.review}</p>;
         })}
       </>
-      <Link to={`./AddReview/${foundRestaurant.fields.name}`}>
+      <Link to={`./AddReview/${foundRestaurant.id}`}>
         <button onClick={() => history.push("/addReview")}> add review</button>
       </Link>
     </div>

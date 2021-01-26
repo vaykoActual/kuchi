@@ -16,7 +16,11 @@ function HomePage(props) {
             key={restaurant.id}
           >
             <h2>{restaurant.fields.name}</h2>
-            <h5>{restaurant.fields.review}</h5>
+            <div>
+              {restaurant.fields["review (from review)"].map((review) => (
+                <div>{review}</div>
+              ))}
+            </div>
           </Link>
         </div>
       ))}

@@ -47,7 +47,7 @@ function App() {
       <Route path="/RestaurantInfo/:id">
         <RestaurantInfo restaurants={restaurants} review={review} />
       </Route>
-      <Route path="/AddReview/:name">
+      <Route path="/AddReview/:id">
         <AddReview review={review} setToggleFetch={setToggleFetch} />
       </Route>
       <Route path="/Footer/blockquote-footer">
