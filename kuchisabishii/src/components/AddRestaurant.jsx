@@ -17,6 +17,7 @@ function Form(props) {
     const fields = {
       name: eatery,
       rating: rating,
+      review: ["recVANp2yylLe5vuX"],
     };
     if (params.id) {
       const recordURL = `${baseURL}/${params.id}`;
@@ -25,26 +26,26 @@ function Form(props) {
       await axios.post(baseURL, { fields }, config);
     }
     //get id of new restaurant
-    const resp = await axios.get(baseURL, config);
-    let recordID = 0;
-    await resp.data.records.forEach((restaurant) => {
-      if (restaurant.fields.ID > recordID) {
-        recordID = restaurant.fields.ID;
-      }
-    });
-    const lastAdded = await resp.data.records.find((restaurant) => {
-      console.log(restaurant.fields.ID, recordID);
-      return restaurant.fields.ID === recordID;
-    });
+    // const resp = await axios.get(baseURL, config);
+    // let recordID = 0;
+    // await resp.data.records.forEach((restaurant) => {
+    //   if (restaurant.fields.ID > recordID) {
+    //     recordID = restaurant.fields.ID;
+    //   }
+    // });
+    // const lastAdded = await resp.data.records.find((restaurant) => {
+    //   console.log(restaurant.fields.ID, recordID);
+    //   return restaurant.fields.ID === recordID;
+    // });
 
-    console.log(lastAdded, resp, recordID);
-    //add restaurant review
-    const newReview = {
-      review: review,
-      Restaurants: [lastAdded.id],
-    };
-    console.log(newReview);
-    await axios.post(reviewBaseURL, { newReview }, config);
+    // console.log(lastAdded, resp, recordID);
+    // //add restaurant review
+    // const newReview = {
+    //   review: review,
+    //   Restaurants: [lastAdded.id],
+    // };
+    // console.log(newReview);
+    // await axios.post(reviewBaseURL, { newReview }, config);
 
     props.setToggleFetch((prev) => !prev);
   };
