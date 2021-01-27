@@ -16,7 +16,7 @@ function RestaurantInfo(props) {
   return (
     <div className="restaurant-infoDiv">
       <main>
-        {<h2>{foundRestaurant.fields.name} </h2>};
+        {<h2>{foundRestaurant.fields.name} </h2>}
         <>
           {filteredReviews.map((oneReview) => {
             return <p>{oneReview.fields.review.id}</p>;
