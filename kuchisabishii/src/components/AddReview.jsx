@@ -2,6 +2,7 @@ import { useState } from "react";
 import { reviewBaseURL, config } from "../services";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import Footer from "./Footer";
 import "./HomePage.css";
 
 function AddReview(props) {
@@ -20,7 +21,7 @@ function AddReview(props) {
 
   return (
     <main>
-      <div>
+      <div className="addReview-div">
         <form onSubmit={handleSubmit}>
           <label htmlFor="review">Review it!</label>
           <input
@@ -31,6 +32,8 @@ function AddReview(props) {
           />
           <button type="submit">submit</button>
         </form>
+        <img src="https://i.imgur.com/Uc45Pnk.jpeg" alt="Still Hungry?" />
+        <Footer />
       </div>
     </main>
   );

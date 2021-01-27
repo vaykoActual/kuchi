@@ -1,4 +1,5 @@
 import { useParams, useHistory, Link } from "react-router-dom";
+import Footer from "./Footer";
 import "./HomePage.css";
 
 function RestaurantInfo(props) {
@@ -28,6 +29,8 @@ function RestaurantInfo(props) {
               add review
             </button>
           </Link>
+          <img src="https://i.imgur.com/Uc45Pnk.jpeg" alt="Still Hungry?" />
+          <Footer />
         </div>
       </main>
     </div>
