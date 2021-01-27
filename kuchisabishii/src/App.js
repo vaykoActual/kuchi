@@ -16,9 +16,6 @@ function App() {
   const [restaurants, setRestaurants] = useState([]);
   const [review, setReview] = useState([]);
   const [title, setTitle] = useState([]);
-  // const [image, setImage] = useState([]);
-  // const [search, setSearch] = useState([]);
-  // const [searchResults, setSearchResults] = useState([]);
 
   const [toggleFetch, setToggleFetch] = useState(false);
   const history = useHistory();
@@ -26,10 +23,7 @@ function App() {
   useEffect(() => {
     const getRestaurants = async () => {
       const resp = await axios.get(baseURL, config);
-      console.log(resp.data);
       setRestaurants(resp.data.records);
-      // const reviewResp = await axios.get(reviewBaseURL, config);a
-      // setReview(reviewResp.data.records);
       history.push("/");
     };
     getRestaurants();

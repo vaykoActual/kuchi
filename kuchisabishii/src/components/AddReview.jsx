@@ -8,15 +8,12 @@ function AddReview(props) {
   const [review, setReview] = useState("");
   const params = useParams();
 
-  // const [name, setName] = useState("");
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const fields = {
       review: review,
       Restaurants: [params.id],
     };
-    console.log(fields);
     await axios.post(reviewBaseURL, { fields }, config);
     props.setToggleFetch((prev) => !prev);
   };
@@ -25,13 +22,6 @@ function AddReview(props) {
     <main>
       <div>
         <form onSubmit={handleSubmit}>
-          {/* <label htmlFor="name">Eatery:</label>
-          <input
-            name="name"
-            type="text"
-            value={eatery}
-            onChange={(e) => setEatery(e.target.value)}
-          /> */}
           <label htmlFor="review">Review it!</label>
           <input
             name="review"

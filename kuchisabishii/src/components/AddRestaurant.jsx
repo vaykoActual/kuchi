@@ -17,7 +17,6 @@ function Form(props) {
     const fields = {
       name: eatery,
       rating: rating,
-      // review: ["recVANp2yylLe5vuX"],
     };
     if (params.id) {
       const recordURL = `${baseURL}/${params.id}`;
@@ -32,7 +31,6 @@ function Form(props) {
     await rests.sort((a, b) => {
       return a.fields.ID - b.fields.ID;
     });
-    // console.log(typeof rests[rests.length - 1].id)
     //Add review to new restaurant
     const newReview = {
       review: review,
@@ -70,7 +68,7 @@ function Form(props) {
           />
           <button type="submit">submit</button>
         </form>
-        <img src="https://i.imgur.com/Uc45Pnk.jpeg" />
+        <img src="https://i.imgur.com/Uc45Pnk.jpeg" alt="Still Hungry?" />
       </div>
       <Footer />
     </main>
