@@ -20,7 +20,7 @@ https://whimsical.com/kuchisabishii-PrrjFrfWwnvCTtL4gVKrup
 
 https://lucid.app/lucidchart/invitations/accept/aff8d64b-c88c-4d36-9590-e8b8af9695f4
 
-![image](https://user-images.githubusercontent.com/76179998/105220028-22c22b00-5b25-11eb-8a50-0bf740ec4404.png)
+![Screen Shot 2021-01-26 at 7 56 11 PM](https://user-images.githubusercontent.com/76179998/105926874-d721ec80-6010-11eb-99f9-99c60b8517a6.png)
 
 ## API and Data Sample
 
