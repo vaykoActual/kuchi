@@ -13,7 +13,7 @@ function RestaurantInfo(props) {
   );
 
   return (
-    <div>
+    <div className="restaurant-infoDiv">
       <main>
         {<h2>{foundRestaurant.fields.name} </h2>};
         <>
