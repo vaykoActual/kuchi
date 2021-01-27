@@ -4,9 +4,12 @@ import "./HomePage.css";
 
 const Footer = () => (
   <footer className="blockquote-footer">
-    <SocialIcon url="https://github.com/vaykoActual" />
+    <SocialIcon url="https://github.com/vaykoActual" fgColor="white" />
     <cite title="Source Title">Living the Dream in NJ</cite>
-    <SocialIcon url="https://www.linkedin.com/in/shayne-vaykovich-57530721/" />
+    <SocialIcon
+      url="https://www.linkedin.com/in/shayne-vaykovich-57530721/"
+      fgColor="white"
+    />
   </footer>
 );
 
