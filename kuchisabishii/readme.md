@@ -103,7 +103,7 @@ Time frames are also key in the development cycle. You have limited time to code
 | Adding Forms    |    H     |      3hrs      |     6hrs      |    6hrs     |
 | Data Deletion   |    H     |      3hrs      |     6hrs      |    6hrs     |
 | CSS             |    H     |      3hrs      |     6hrs      |    6hrs     |
-| Total           |    H     |     26hrs      |     50hrs     |    50hrs    |
+| Total           |    H     |     26hrs      |     52hrs     |    52hrs    |
 
 ## SWOT Analysis
 

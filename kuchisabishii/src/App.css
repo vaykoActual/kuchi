@@ -38,11 +38,16 @@ img {
 
 @media only screen and (max-width: 600px) {
   div {
-    background: navy;
+    background: rgb(154, 148, 1);
   }
 }
 @media only screen and (min-width: 600px) {
   div {
     background: rgb(165, 7, 7);
+  }
+}
+@media only screen and (orientation: landscape) {
+  body {
+    background-color: lightblue;
   }
 }
