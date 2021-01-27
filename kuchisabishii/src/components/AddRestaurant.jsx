@@ -41,7 +41,7 @@ function Form(props) {
   };
   return (
     <main>
-      <div>
+      <div className="add-restDiv">
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Eatery:</label>
           <input
